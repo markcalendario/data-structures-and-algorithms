@@ -1,4 +1,4 @@
-let list = [1, 5, 7, 9, 12, 17, 88, 200, 500, 1023]
+const { orderedList } = require("./sampleData")
 
 function binarySearch(list, target) {
   let turns = 0
@@ -23,4 +23,4 @@ function binarySearch(list, target) {
   return console.log(`Target ${target} is not in the list. [${turns} turns]`)
 }
 
-binarySearch(list, 13);
+binarySearch(orderedList, 2937);

@@ -1,4 +1,5 @@
-let list = [44, 55, 66, 856, 1234, 7689]
+const { orderedList } = require("./sampleData")
+
 let turns = 0
 
 function binarySearch(list, target, first, last) {
@@ -20,4 +21,4 @@ function binarySearch(list, target, first, last) {
   binarySearch(list, target, first, last)
 }
 
-binarySearch(list, 3, 0, list.length - 1);
+binarySearch(orderedList, 2937, 0, orderedList.length - 1);
