@@ -28,7 +28,7 @@ def start():
   if is_found:
     print(f"Goal {goal} found!")
   else:
-    print("All nodes has been traversed. The goal cannot be found.")
+    print("All nodes have been traversed. The goal cannot be found.")
 
 
 start()
