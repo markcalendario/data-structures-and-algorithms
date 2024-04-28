@@ -1,10 +1,10 @@
 from tree import construct_tree
 
 def breadth_first_search(root, goal):
-  stack = [root]
+  queue = [root]
 
-  while stack:
-    current_node = stack.pop(0)
+  while queue:
+    current_node = queue.pop(0)
     print(current_node.value)
 
     if current_node.value == goal:
@@ -12,11 +12,11 @@ def breadth_first_search(root, goal):
 
     # Left 
     if current_node.left:
-      stack.append(current_node.left)
+      queue.append(current_node.left)
 
     # Right
     if current_node.right:
-      stack.append(current_node.right)
+      queue.append(current_node.right)
     
   return False
 

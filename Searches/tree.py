@@ -1,8 +1,4 @@
 class Node:
-  left: None
-  right: None
-  value: None
-
   def assign_left(self, Node):
     self.left = Node
 
@@ -13,7 +9,6 @@ class Node:
     self.value = value
     self.left = None
     self.right = None
-
 
 def construct_tree():
   root = Node("Gate")

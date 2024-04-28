@@ -1,10 +1,10 @@
 from tree import construct_tree
 
 def depth_first_search(root, goal):
-  queue = [root]
+  stack = [root]
 
-  while queue:
-    current_node = queue.pop()
+  while stack:
+    current_node = stack.pop()
     print(current_node.value)
 
     if current_node.value == goal:
@@ -12,11 +12,11 @@ def depth_first_search(root, goal):
 
     # Right
     if current_node.right:
-      queue.append(current_node.right)
+      stack.append(current_node.right)
 
     # Left 
     if current_node.left:
-      queue.append(current_node.left)
+      stack.append(current_node.left)
     
   return False
 
