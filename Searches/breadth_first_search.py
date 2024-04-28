@@ -31,7 +31,7 @@ def start():
   print("=================================")
 
   if is_found:
-    print(f"\Location '{goal}' found!")
+    print(f"\nLocation '{goal}' found!")
   else:
     print("\nResult: All nodes have been traversed. The goal cannot be found.")
 
