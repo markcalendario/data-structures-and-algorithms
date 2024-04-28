@@ -1,4 +1,4 @@
-from tree_with_cost import construct_tree_with_cost
+from tree_with_cost import construct_tree_with_cost, show_options
 
 def uniform_cost_search(root, goal):
   frontier = [[root.distance, root, root.distance]]
@@ -34,12 +34,21 @@ def uniform_cost_search(root, goal):
 
 def start():
   root = construct_tree_with_cost()
-  goal = input("Please enter a goal: ")
+
+  show_options()
+  goal = input("Please choose a location: ")
+
+  print(f"\n==== Searching {goal} Using UCS ====")
   is_found, cost = uniform_cost_search(root, goal)
+  print("=================================")
 
   if is_found:
-    print(f"Goal {goal} found with the distance of {cost} meters.")
+    print(f"\nLocation {goal} found with the distance of {cost} meters.")
   else:
-    print("All nodes have been traversed. The goal cannot be found.")
+    print("\nAll nodes have been traversed. The location cannot be found.")
+
+
+
+ 
 
 start()

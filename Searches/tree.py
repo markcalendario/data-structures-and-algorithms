@@ -31,3 +31,8 @@ def construct_tree():
   catwalk.assign_right(tennis_court)
 
   return root
+
+def show_options():
+  print("=================== PUP Amenities =========================")
+  print("Gate, Gym, Oval, Pool, Catwalk, Souvenir Shop, Tennis Court")
+  print("===========================================================")

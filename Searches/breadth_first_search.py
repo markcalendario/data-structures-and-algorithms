@@ -1,4 +1,4 @@
-from tree import construct_tree
+from tree import construct_tree, show_options
 
 def breadth_first_search(root, goal):
   queue = [root]
@@ -22,12 +22,18 @@ def breadth_first_search(root, goal):
 
 def start():
   root = construct_tree()
-  goal = input("Please enter a goal: ")
+
+  show_options()
+  goal = input("Please choose a location: ")
+
+  print(f"\n==== Searching {goal} Using BFS ====")
   is_found = breadth_first_search(root, goal)
+  print("=================================")
 
   if is_found:
-    print(f"Goal {goal} found!")
+    print(f"\Location '{goal}' found!")
   else:
-    print("All nodes have been traversed. The goal cannot be found.")
+    print("\nResult: All nodes have been traversed. The goal cannot be found.")
+
 
 start()

@@ -33,3 +33,7 @@ def construct_tree_with_cost():
 
   return root
 
+def show_options():
+  print("=================== PUP Amenities =========================")
+  print("Gate, Gym, Oval, Pool, Catwalk, Souvenir Shop, Tennis Court")
+  print("===========================================================")

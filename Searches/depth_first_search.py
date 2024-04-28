@@ -1,4 +1,4 @@
-from tree import construct_tree
+from tree import construct_tree, show_options
 
 def depth_first_search(root, goal):
   stack = [root]
@@ -22,13 +22,18 @@ def depth_first_search(root, goal):
 
 def start():
   root = construct_tree()
-  goal = input("Please enter a goal: ")
+
+  show_options()
+  goal = input("Please choose a location: ")
+
+  print(f"\n==== Searching {goal} Using DFS ====")
   is_found = depth_first_search(root, goal)
+  print("=================================")
 
   if is_found:
-    print(f"Goal {goal} found!")
+    print(f"\nLocation '{goal}' found!")
   else:
-    print("All nodes have been traversed. The goal cannot be found.")
+    print("\nResult: All nodes have been traversed. The location cannot be found.")
 
 
 start()
